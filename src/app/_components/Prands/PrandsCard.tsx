@@ -1,9 +1,10 @@
 import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Brandtype } from '@/Types/Brand.type'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
-export default function PrandsCard({data}) {
+export default function PrandsCard({data}:{data:Brandtype}) {
 
 
   return (

@@ -11,7 +11,14 @@ export default function Navpar() {
 const path= usePathname()
 
 const session= useSession()
-const {counter}=useContext(Cartcontsxt)
+
+const context=useContext(Cartcontsxt)
+if(!context) throw new Error ("not exist")
+  const {counter }=context
+
+
+
+
   return (
     <div className='bg-emerald-500 text-white'>
       <div className='w-[90%] mx-auto p-6 bg-red lg:flex justify-between items-center flex-wrap'>

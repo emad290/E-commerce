@@ -1,9 +1,5 @@
 "use client"
-import pic1 from "../../../../public/OIP.webp"
-import pic2 from "../../../../public/OIP 2.webp"
-import pic3 from "../../../../public/OIP 3.webp"
-import pic4 from "../../../../public/OIP 4.jpg"
-import pic5 from "../../../../public/OIP 5.png"
+
 import pic6 from "../../../../public/insta-item2.jpg"
 import pic7 from "../../../../public/insta-item3.jpg"
 import pic8 from "../../../../public/post-item1.jpg"
@@ -32,10 +28,7 @@ export default function MneuSlider() {
     <div className='contianer w-[50%]  mx-auto p-6 my-6 relative'>
         <Swiper
         
-        style={{
-          '--swiper-navigation-color': '#fff',
-          '--swiper-pagination-color': '#fff',
-        }}
+       
         speed={600}
         parallax={true}
         pagination={{

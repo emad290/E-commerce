@@ -5,10 +5,7 @@ import React from 'react'
 import { useForm } from 'react-hook-form'
 import { Button } from "@/components/ui/button"
 import { zodResolver } from '@hookform/resolvers/zod'
-import { ScemaReg } from '../Scema/Register.scema'
-import axios from 'axios'
-import { RoRegisterTypeot } from '@/Types/Register.type'
-import { toast } from "sonner"
+
 import { useRouter } from 'next/navigation'
 import { Loginscema } from '../Scema/Login.scema'
 

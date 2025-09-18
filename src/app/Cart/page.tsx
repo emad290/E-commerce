@@ -14,7 +14,13 @@ import Link from 'next/link'
 
 
 export default function Cart() {
-const{counter,setcounter}=useContext(Cartcontsxt)
+
+const context= useContext(Cartcontsxt)
+if(!context)  throw new Error ("not exisest")
+const{counter,setcounter}=context
+
+
+
 
   const [product,setproduct]=useState([])
   const [price,setprice]=useState("")

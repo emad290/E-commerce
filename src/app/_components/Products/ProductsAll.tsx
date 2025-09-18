@@ -2,7 +2,7 @@
 import React from 'react'
 import {
   Card,
-  CardAction,
+  
   CardContent,
   CardDescription,
   CardFooter,
@@ -10,13 +10,14 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import Link from 'next/link'
-import { Button } from "@/components/ui/button"
+
 import Image from 'next/image'
 import CardButton from '../CardBuuton/CardButton'
+import { AllProductsType } from '@/Types/AllProducts.type'
 
-// import { AllProductsType } from '@/Types/AllProducts.type'
 
-export default function ProductsAll({data} ) {
+
+export default function ProductsAll({data}:{data:AllProductsType} ) {
  
 
    

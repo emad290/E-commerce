@@ -28,6 +28,8 @@ type CartProviderProps = {
   children: ReactNode
 }
 
+
+
 export default function CartcontsxtProvider({ children }: CartProviderProps) {
   const [counter, setcounter] = useState<number>(0)
 

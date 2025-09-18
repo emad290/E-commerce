@@ -7,7 +7,12 @@ import { Cartcontsxt } from '../Context/CartContext'
 
 export default function CardButton({id}:{id:string}) {
 
-const {counter ,setcounter}=useContext(Cartcontsxt)
+const context=useContext(Cartcontsxt)
+if(!context) throw new Error ("not exist")
+  const {counter ,setcounter}=context
+
+
+
 
 async function AddCrat(id:string){
     const res = await GetAllAddProducts(id)

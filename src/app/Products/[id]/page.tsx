@@ -1,6 +1,6 @@
 import React from 'react'
 import GetSingleProduct from '../../../../Callapi/GetSingleProduct'
-import { Button } from "@/components/ui/button"
+
 import Image from 'next/image'
 import CardButton from '@/app/_components/CardBuuton/CardButton'
 export default async function DaynamcId({params}:{params :{id :string}}) {
