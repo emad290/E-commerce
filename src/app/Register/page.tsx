@@ -6,7 +6,7 @@ import { useForm } from 'react-hook-form'
 import { Button } from "@/components/ui/button"
 import { zodResolver } from '@hookform/resolvers/zod'
 import { ScemaReg } from '../Scema/Register.scema'
-import axios from 'axios'
+import axios, { AxiosError } from 'axios'
 import { RoRegisterTypeot } from '@/Types/Register.type'
 import { toast } from "sonner"
 import { useRouter } from 'next/navigation'
@@ -41,8 +41,8 @@ router.push('/Login')
     
   }
 catch(err){
- 
-  toast.error(err.response.data.message,{position:"top-center" ,duration:5000})
+ const error = err as AxiosError<{ message: string }>;
+  toast.error(error.response?.data?.message??"Something went wrong",{position:"top-center" ,duration:5000})
 }
 }
 
