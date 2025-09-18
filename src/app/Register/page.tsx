@@ -17,7 +17,7 @@ import { useRouter } from 'next/navigation'
 
 
 export default function Register() {
-let router = useRouter()
+const router = useRouter()
 const form = useForm<RoRegisterTypeot>({
   defaultValues:{
     name:"",

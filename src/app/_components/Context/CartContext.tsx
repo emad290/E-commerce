@@ -11,7 +11,7 @@ import ShowProducs from "@/CarAction/ShowProducts"
 type Product = {
   id: number
   count: number
-  [key: string]: any // لو في properties زيادة من الـ API
+  [key: string]: unknown // لو في properties زيادة من الـ API
 }
 
 // 🟢 type بتاع الـ context value
