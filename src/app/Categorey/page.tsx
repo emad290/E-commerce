@@ -11,7 +11,7 @@ const {data}=await GetAllCategoriy()
 
       <h1 className='my-6 font-bold text-center text-3xl'>OUR CATEGOREY</h1>
       <div className='flex flex-wrap gap-3'>
-{data.map((cat)=><CatCard data={cat}/>)}
+{data.map((cat)=><CatCard data={cat} key={cat._id}/>)}
 
 
       </div>
