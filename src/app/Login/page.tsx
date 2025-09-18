@@ -37,16 +37,15 @@ const form = useForm({
 async function HandleLogin(val: LoginTypeot) {
   try {
     const res = await signIn("credentials", {
-      redirect: false,
       email: val.email,
       password: val.password,
+      redirect:true,
+      callbackUrl:"/"
     })
 
     if (res && res.ok) {
       rout.push("/")
-    } else {
-      console.log("Login failed", res?.error)
-    }
+    } 
   } catch (err) {
     console.error(err)
   }
@@ -63,7 +62,7 @@ async function HandleLogin(val: LoginTypeot) {
 
 
  <form onSubmit={form.handleSubmit(HandleLogin)}>
-<h1 className='text-center my-3 font-bold'>Register now</h1>
+<h1 className='text-center my-3 font-bold'>Login now</h1>
 
 
  <FormField

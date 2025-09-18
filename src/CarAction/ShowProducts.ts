@@ -1,3 +1,4 @@
+"use server"
 import GetMytoken from "@/Utilites/GetToken"
 
 

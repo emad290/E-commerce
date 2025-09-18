@@ -33,7 +33,7 @@ const form = useForm<RoRegisterTypeot>({
  async function HandleRegister(val :RoRegisterTypeot){
   try{
   const respone=await axios.post(`https://ecommerce.routemisr.com/api/v1/auth/signup`,val);
-  console.log(respone.data.message)
+
   if(respone.data.message=="success"){
 toast.success("you create a new acount" ,{position:"top-center" ,duration:5000})
 router.push('/Login') 
