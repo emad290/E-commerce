@@ -10,6 +10,7 @@ import { useRouter } from 'next/navigation'
 import { Loginscema } from '../Scema/Login.scema'
 
 import {signIn} from 'next-auth/react'
+import { LoginTypeot } from '@/Types/Login.type'
 
 
 
@@ -33,23 +34,22 @@ const form = useForm({
   resolver:zodResolver(Loginscema)
 })
 
-async function HandleLogin (val){
+async function HandleLogin(val: LoginTypeot) {
+  try {
+    const res = await signIn("credentials", {
+      redirect: false,
+      email: val.email,
+      password: val.password,
+    })
 
-try{
-const res = await signIn("credentials",{
-  email:val.email,
-  password:val.password,
-  redirect:false 
-})
-
-if(res.ok){
-  rout.push("/")
-}
-}
-catch(err){
-console.log(err)
-}
-
+    if (res && res.ok) {
+      rout.push("/")
+    } else {
+      console.log("Login failed", res?.error)
+    }
+  } catch (err) {
+    console.error(err)
+  }
 }
 
 
