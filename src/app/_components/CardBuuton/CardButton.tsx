@@ -18,6 +18,7 @@ async function AddCrat(id:string){
     const res = await GetAllAddProducts(id)
   
     if(res.status=="success"){
+     
 setcounter(counter+1)
         toast.success("you add product successfuly",{position:"top-center",duration:5000})
     }else{
